@@ -1,0 +1,12 @@
+{
+  "name": "workmethod-md",
+  "interface": { "displayName": "WORKMETHOD.md" },
+  "plugins": [
+    {
+      "name": "workmethod-md",
+      "source": { "source": "local", "path": "./" },
+      "policy": { "installation": "AVAILABLE", "authentication": "ON_INSTALL" },
+      "category": "Productivity"
+    }
+  ]
+}

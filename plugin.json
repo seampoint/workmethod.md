@@ -1,0 +1,9 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "workmethod-md",
+  "version": "1.0.0",
+  "description": "Follow a team's WORKMETHOD.md files and keep a write-once record of commitments and decisions beside the work.",
+  "author": { "name": "Seampoint, LLC", "url": "https://seampoint.com" },
+  "repository": "https://github.com/seampoint/workmethod.md",
+  "license": "Apache-2.0"
+}
