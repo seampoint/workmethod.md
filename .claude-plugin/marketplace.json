@@ -1,0 +1,8 @@
+{
+  "name": "workmethod-md",
+  "owner": { "name": "Seampoint, LLC", "url": "https://seampoint.com" },
+  "description": "The WORKMETHOD.md skill",
+  "plugins": [
+    { "name": "workmethod-md", "source": "./" }
+  ]
+}
