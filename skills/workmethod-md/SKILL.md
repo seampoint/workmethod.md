@@ -51,7 +51,7 @@ Never edit, rename or delete an entry file, yours or anyone's. To close, correct
 
 ## Route record work
 
-Before adding any entry, read [Keep the record](references/record.md). Also read it when notes or conversation produce new commitments or decisions, the user changes something you drafted, or anyone tells you how work is done here (a correction, "always", "never"). It gives the exact entry format, full record reads, label reuse, attribution, extensions and writing rules. Record new commitments and decisions in the record, not only in what you write for the user.
+Before adding any entry, read [Keep the record](references/record.md). Also read it before deciding whether completed work needs an entry, when preparing a proposal or a work-result note, when notes or conversation produce new commitments or decisions, when the user changes something you drafted, or when anyone tells you how work is done here (a correction, "always", "never"). It gives the exact entry format, full record reads, label reuse, attribution, extensions and writing rules. Record new commitments and decisions in the record, not only in what you write for the user.
 
 ## Route open-item questions
 
