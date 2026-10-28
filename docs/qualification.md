@@ -27,3 +27,13 @@ Claude Code 2.1.292 recognized only the explicit workmethod-md 1.0.1 project plu
 The source and package checks verify version consistency, local reference resolution, unchanged repository examples and reproducible ZIP contents. Both archives include applicable license and NOTICE material.
 
 Public marketplace installation, anonymous access, automatic updates, other hosts, remote connectors and real customer workflows are unqualified. A post-publication source-access check cannot be completed while the repository remains private. Installation alone is never a behavioral qualification.
+
+## Package 1.0.2 browser trial (October 28, 2026)
+
+The packaging candidate was imported through Claude web’s native skill uploader in a separate Free account with no Workbench installation. The UI showed all seven resources, package version 1.0.2 and an enabled standalone skill. A fresh Sonnet 5.5 / Medium session’s skill-use receipt resolved to that installation. These observations qualify that import and selection path, not every workflow.
+
+In a copied fictional file tree inside the cloud sandbox, a new nine-field commitment was saved and read back. An identical retry read the same entry and created no duplicate. The method-change trial waited for exact delegated-owner approval, then applied the shown sentence and version bump and recorded the decision and authorized act.
+
+The trial was not a clean behavioral pass: the initial summary omitted the discount’s three-year condition, and the method-change trial did not preserve a separate previous-version history snapshot. It disclosed relying on the original fixture input instead. Initial fixture creation required recovery after the shell could not find the test root. No proposal entry was saved at the draft stage.
+
+The Free account’s usage limit interrupted the final compatibility answer and downloadable snapshot. Saved-byte tool receipts support the individual observations, but a complete independent exported-tree conservation audit remains pending. This was one fixture, session and model setting; it did not qualify repeatability, live connectors, updates or customer use. The package’s instruction rules are unchanged from 1.0.1; the changes are version markers, notice filename, archive layout and packaging checks.

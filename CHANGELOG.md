@@ -1,5 +1,11 @@
 # Changes
 
+## 1.0.2 packaging candidate
+
+- Rename the standalone attribution file to NOTICE.txt without changing its contents, and reject unsupported or hidden resource filenames in source checks.
+- Package the standalone skill inside one workmethod-md folder for native Claude uploads.
+- Keep instruction behavior and the WORKMETHOD.md working-draft format unchanged. Claude web native import and selection succeeded in one isolated trial; behavioral qualification remains incomplete as documented in docs/qualification.md. Previously released assets remain unchanged.
+
 ## 1.0.1 publication candidate
 
 - Distinguish package version from working-draft format status and remove the universal vendor-retention assurance.

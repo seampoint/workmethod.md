@@ -1,6 +1,6 @@
 # Known limits of the working draft
 
-Skill package 1.0.1 implements the WORKMETHOD.md 1.0 working draft. The format has not been ratified as stable. It states instructions for an assistant; installing it does not guarantee compliance or enable capabilities the host lacks.
+Skill package 1.0.2 implements the WORKMETHOD.md 1.0 working draft. The format has not been ratified as stable. It states instructions for an assistant; installing it does not guarantee compliance or enable capabilities the host lacks.
 
 - Reading requires access to the selected stores. Saves require a permitted writer and independent readback. The skill does not install connectors, runtimes or Workbench.
 - Automatic activation for CRM, email, calendar and other connected-system operations is not qualified. Establish the work scope and governing method explicitly. Follow a method-designated canonical system without duplicating its records; the connected system is not certified as a file-format implementation by this draft.
