@@ -27,3 +27,17 @@ Claude Code 2.1.292 recognized only the explicit workmethod-md 1.0.1 project plu
 The source and package checks verify version consistency, local reference resolution, unchanged repository examples and reproducible ZIP contents. Both archives include applicable license and NOTICE material.
 
 Public marketplace installation, anonymous access, automatic updates, other hosts, remote connectors and real customer workflows are unqualified. A post-publication source-access check cannot be completed while the repository remains private. Installation alone is never a behavioral qualification.
+
+## Package 1.0.2 browser trial (October 28, 2026)
+
+The packaging candidate was imported through Claude web’s native skill uploader in a separate Free account with no Workbench installation. The UI showed all seven resources, package version 1.0.2 and an enabled standalone skill. A fresh Sonnet 5.5 / Medium session’s skill-use receipt resolved to that installation. These observations qualify that import and selection path, not every workflow.
+
+In a copied fictional file tree inside the cloud sandbox, a new nine-field commitment was saved and read back. An identical retry read the same entry and created no duplicate. The method-change trial waited for exact delegated-owner approval, then applied the shown sentence and version bump and recorded the decision and authorized act.
+
+The trial was not a clean behavioral pass: the initial summary omitted the discount’s three-year condition, and the method-change trial did not preserve a separate previous-version history snapshot. It disclosed relying on the original fixture input instead. Initial fixture creation required recovery after the shell could not find the test root. No proposal entry was saved at the draft stage.
+
+The Free account’s usage limit interrupted the final compatibility answer and downloadable snapshot. After the user upgraded the isolated account, the same task resumed with Sonnet 5.5 / Medium unchanged. The saved tree persisted. The legacy two-line method was recognized with a disclosed folder-scope assumption, and the headerless file was treated as ordinary data.
+
+An independent audit of the downloaded fourteen-file snapshot verified every exported hash, all five original records unchanged, ten original files unchanged, exactly one new commitment with no duplicate, and separate approval and authorized-act entries. The only modified original was the method, containing exactly the approved sentence and version bump. The export also confirmed that no draft proposal entry or method-history snapshot had been saved. Resumption completed the audit; it did not repair or erase the original behavioral gaps.
+
+This was one fixture, session and model setting; it did not qualify repeatability, live connectors, updates or customer use. The package’s instruction rules are unchanged from 1.0.1; the changes are version markers, notice filename, archive layout and packaging checks.

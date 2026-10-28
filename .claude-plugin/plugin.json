@@ -1,7 +1,7 @@
 {
   "name": "workmethod-md",
   "displayName": "WORKMETHOD.md",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Follow a team's WORKMETHOD.md files and keep a write-once record of commitments and decisions beside the work.",
   "author": { "name": "Seampoint, LLC", "url": "https://seampoint.com" },
   "homepage": "https://github.com/seampoint/workmethod.md",

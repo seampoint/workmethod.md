@@ -53,7 +53,7 @@ Anything that reads the files can build on them: a view of what needs one person
 
 ## Versions
 
-[`VERSION`](VERSION) identifies the skill package: 1.0.1. It implements the WORKMETHOD.md 1.0 working draft, which has not been ratified as stable. Package versioning does not promise stable format compatibility. See [changes](CHANGELOG.md) and [known limits](docs/known-limits.md). Pin the reviewed release or commit when using it as an engagement reference.
+[`VERSION`](VERSION) identifies the skill package: 1.0.2. It implements the WORKMETHOD.md 1.0 working draft, which has not been ratified as stable. Package versioning does not promise stable format compatibility. See [changes](CHANGELOG.md) and [known limits](docs/known-limits.md). Pin the reviewed release or commit when using it as an engagement reference.
 
 ## License
 
@@ -62,3 +62,5 @@ Apache License 2.0; see [`LICENSE`](LICENSE) and [`NOTICE`](NOTICE). The templat
 ## Maintainer and feedback
 
 Seampoint, LLC maintains this draft. Report fictional minimal reproductions through [GitHub issues](https://github.com/seampoint/workmethod.md/issues); do not include private work files, personal data or credentials. Maintainer responsibility does not confer authority over a user's methods or create a support entitlement. Use a separately agreed service arrangement for paid assistance.
+
+The standalone ZIP contains one `workmethod-md/` folder with `SKILL.md`, Markdown references, `LICENSE.txt` and `NOTICE.txt`. Use the standalone ZIP for a native skill uploader; the Claude plugin ZIP is a separate plugin layout. Native installation and behavioral qualification are distinct; see the qualification record before treating a host as supported.

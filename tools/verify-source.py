@@ -25,7 +25,15 @@ for p in ROOT.rglob('*.md'):
 for p in ROOT.rglob('*.json'):
     if '.git' not in p.parts and 'dist' not in p.parts:json.loads(p.read_text())
 assert (ROOT/'LICENSE').read_bytes()==(ROOT/'skills/workmethod-md/LICENSE.txt').read_bytes()
-assert (ROOT/'skills/workmethod-md/NOTICE').exists()
+assert (ROOT/'skills/workmethod-md/NOTICE.txt').is_file()
+# The standalone upload contains only supported Markdown/plain-text resources.
+# This is a packaging contract, not a claim that every host accepts the package.
+skill_files=[p for p in (ROOT/'skills/workmethod-md').rglob('*') if p.is_file()]
+for p in skill_files:
+    relative=p.relative_to(ROOT/'skills/workmethod-md')
+    assert all(not part.startswith('.') for part in relative.parts),f'Hidden skill path: {relative}'
+    assert p.suffix.lower() in {'.md','.txt'},f'Unsupported standalone skill file type: {relative}'
+    p.read_text(encoding='utf-8')
 example_files=[]
 for p in (ROOT/'examples').rglob('*'):
     if not p.is_file():continue
