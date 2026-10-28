@@ -3,3 +3,5 @@
 Copyright Seampoint, LLC. Licensed under the Apache License 2.0; see [LICENSE.txt](../LICENSE.txt).
 
 If the user asks what is open, due or waiting and no other installed skill handles that question, read the records you can reach under the folder they name and list: open commitments (no later `done` with the same Label) with their Due, open `pending` entries and whom they wait on, and proposals and corrections not yet decided. Group by unit of work. Produce the list fresh; never save it to the work folders.
+
+If separately authorized calendar, mail or other findings are also used, reconcile each relevant finding with the applicable canonical record before presenting it as open or writing a duplicate. Keep unmatched or inaccessible state uncertain. This does not require a whole-tree scan on every write or authorize access beyond the selected scope.

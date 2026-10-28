@@ -14,7 +14,7 @@ Method name: <short-name> v<number>
 Owner: <the one person who decides changes to this method>
 Applies to: this folder and everything below it
 
-<Keep the three lines above directly under the title: an assistant treats a file as a method only when they are there. Raise the version number every time a rule or a decision-maker changes. Record entries name the version in force, so a later review knows which rules applied.>
+<Keep all three lines directly under the title when writing a new method. Readers also recognize existing headers with Method name and Owner only; a missing Applies to means the file's folder and everything below it, and the reader discloses that assumption. Raise the version number every time a rule or a decision-maker changes. Record entries name the version in force, so a later review knows which rules applied.>
 
 <When the work this method governs is finished, do not delete this file: add the line `Retired: do not apply this method` directly under the title and keep the method and its record as history.>
 

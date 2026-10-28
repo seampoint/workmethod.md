@@ -16,7 +16,7 @@ Actor: the named person, or your own assistant name if you did it
 Object: what was acted on, in a few words, the same wording each time it is mentioned
 Label: a short stable name for the thing this entry is about, lower case with hyphens, such as renewal-proposal-draft
 Authority: the named person who approved it, or none
-Due: YYYY-MM-DD for a commitment, otherwise -
+Due: YYYY-MM-DD for a commitment or a change to one, otherwise -
 Source: the file, meeting, email or conversation it came from, in words a person can follow
 Method: every method in force on the path to this work, nearest first, each with its version and separated by semicolons, such as harbor-renewal v6; clients v3, or none if you found no method
 ```
@@ -26,7 +26,7 @@ Record extensions: if a method in force declares a record extension (a line such
 Rules for entries:
 
 - Read the clock before you write the Date. Write it in local time on a 24-hour clock, for example `2026-10-06 14:20`, with nothing after it. If you do not know the user's time zone, ask.
-- The first entry about a commitment, decision, proposal or correction sets its Label. Every later entry about the same thing (its `done`, a `change`, a further correction) reuses that Label exactly, so readers can join them.
+- A Label identifies one obligation, question, proposal or decision through its history, not a broad topic. A separate new obligation gets a new Label even if it arises from an existing decision. The first entry about a commitment, decision, proposal or correction sets its Label. Every later entry about the same thing (its `done`, a `change`, a further correction) reuses that Label exactly, so readers can join them.
 - Before adding, list the `record/` folder and read the entries. If an entry already records the same act (same Kind and Label, same Actor, same thing done), do not add another. A later act about the same thing, such as a second decision, a further correction or a change, is a new entry with the same Label. If an entry describes the same thing under a different Label, reuse its Label rather than inventing a new one.
 - Record who actually did the thing. If you drafted or sent something, you are the Actor, and the person who approved it is the Authority.
 - Only a person decides. When you bring a decision to a person, record their answer as a `decision` entry: that person as Actor and Authority, the decision in the Object, and in Source who asked them, where and when. Record it whether they approve, change or refuse. Then record the act itself with that person as the Authority.
@@ -34,6 +34,6 @@ Rules for entries:
 - Record a commitment only in the name of the person who made it, or in your own name for what you will do. When work waits on someone who has not agreed to do it, add a `pending` entry instead: the person waiting is the Actor, and the Object says whom they wait on, for what, and by when. If that person agrees, record their commitment then.
 - A `done` entry repeats the Label of the commitment or pending entry it closes.
 - When the user changes something you drafted, add a `change` entry: the user as Actor, what changed as Object, the reason in Source if given. A `change` entry about a commitment gives in Due the commitment's due date after the change; `-` means it no longer has one.
-- When anyone tells you how work is done here (a correction, "always", "never"), add a `correction` entry in the unit you are working in, naming in the Object which method it concerns. Do not save it to your own memory. Tell the user the method's owner decides whether it becomes part of the method.
+- When anyone tells you how work is done here (a correction, "always", "never"), add a `correction` entry in the unit you are working in, naming in the Object which method it concerns. Host memory does not replace the applicable work record. If a higher-priority host rule prevents the record, disclose the conflict and the missing step; do not bypass that rule or claim compliance. The governing method should name a record for tree-wide corrections. Tell the user the method's owner decides whether the correction becomes part of the method.
 - New commitments and decisions from notes or conversation go in the record, not only in what you write for the user.
 - If you cannot create files in the folder, say so and give the user the exact entry text.

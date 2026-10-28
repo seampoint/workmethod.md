@@ -14,3 +14,7 @@ Typical cases:
 - You cannot find the folder: ask where the file is saved.
 - You cannot reach the methods: offer to go ahead with the work marked "not checked against the method", or to wait.
 - You cannot create files in the record: give the user the exact entry text.
+
+A connector that cannot update a file in place is also a capability gap. Do not silently archive and recreate files. Use an applicable, explicitly approved method procedure or disclose the limitation and obtain authorization for the proposed fallback. Immutable record entries are never archive-and-replace candidates.
+
+When an applicable method requires a missing skill or practice, identify the exact unavailable step. Use a permitted manual procedure only when one is available and authorized. Follow this handoff procedure for the rest; never claim the missing maintenance ran. A successfully saved canonical entry remains saved even if later derived maintenance fails. Report that distinction and any stale derived file.

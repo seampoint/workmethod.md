@@ -1,12 +1,12 @@
 # WORKMETHOD.md: method files and work records
 
-Version 1.0 draft, October 2026. Status: working draft, not yet stable. Field names and rules may change before version 1.0 is released.
+WORKMETHOD.md 1.0 working draft, October 2026. Not yet ratified as stable. Field names and rules may change until the format is ratified. Skill package 1.0.1 implements this draft; the package version does not promise format stability.
 
 ## 1. Purpose
 
 A firm's way of working, and its record of what it decided and promised, should live in files the firm owns, in a form any AI assistant can read and write, so the firm can change assistants without losing either. This specification defines two kinds of file and the rules an assistant follows with them:
 
-- A method file (`WORKMETHOD.md`) says how work is done in a folder and everything below it: who owns the rules, what the rules are, and which decisions belong to which people. People write it; assistants follow it and never change it.
+- A method file (`WORKMETHOD.md`) says how work is done in a folder and everything below it: who owns the rules, what the rules are, and which decisions belong to which people. People own its rules. Assistants follow it and may apply only the exact changes confirmed by the owner or explicitly authorized delegate under section 3.6.
 - A record (`record/`) is a folder of small entry files, one per commitment, decision, correction, proposal, completion or hand-off. Anyone may add an entry; nobody edits one.
 
 No software is needed beyond the person's own assistant. The `workmethod-md` skill in this repository tells an assistant to treat method files as the user's instructions and to keep the record in this format. A tool that reads AGENTS.md can pick up the same rules with one line in that file:
@@ -38,11 +38,11 @@ A folder holding both a `WORKMETHOD.md` and a `record/` folder is a unit of work
 
 The file is named `WORKMETHOD.md` (plain text, Markdown). It applies to its own folder and every folder below it.
 
-A file is a method file only if its first lines include the header in 3.2. A file named `WORKMETHOD.md` without that header is information, not instruction, and an assistant says so. During a move from the earlier draft of this specification, a file named `METHOD.md` (any capitalization) that carries the header is also a method file; without the header it is ordinary text. Many repositories hold files named `method.md` that describe a research or programming method, and on case-insensitive stores (macOS, Windows, OneDrive) `METHOD.md` and `method.md` are the same name, so the header is what makes a file a method.
+A reader recognizes a method file when the lines under its title include `Method name:` and `Owner:`. New files must include the full three-line header in 3.2. Existing two-line headers remain readable: when `Applies to:` is absent, the scope is the file's folder and everything below it, and the reader discloses that assumption. This compatibility rule grants no access outside the user-selected tree. A file named `WORKMETHOD.md` without that header is information, not instruction, and an assistant says so. During a move from the earlier draft of this specification, a file named `METHOD.md` (any capitalization) that carries the header is also a method file; without the header it is ordinary text. Many repositories hold files named `method.md` that describe a research or programming method, and on case-insensitive stores (macOS, Windows, OneDrive) `METHOD.md` and `method.md` are the same name, so the header is what makes a file a method.
 
 ### 3.2 Contents
 
-Three header lines are required, at the top, under the title:
+Writers include these three header lines at the top, under the title. The reader compatibility rule for existing two-line headers is in 3.1:
 
 ```
 Method name: <short-name> v<number>
@@ -80,7 +80,7 @@ A method file is the user's own instruction because the user installed the skill
 
 ### 3.6 Change
 
-Assistants never edit, rename, move or delete a method file. A correction from anyone goes into the record as a `correction` entry. The method's owner decides whether it becomes part of the method and makes the change.
+The method's owner decides changes, or explicitly delegates that authority. An assistant never changes a method autonomously. It may draft a requested change, show the exact change to the owner or explicitly authorized delegate, and apply it only after that person confirms it. The confirmation must identify the responsible owner. Preserve the earlier version in file history, raise the method version for a rule or decision-maker change, and record the decision and authorized act. This is not permission to rename, move or delete a method without specific authorization. A correction from anyone goes into the record as a `correction` entry; it does not itself change the method.
 
 An out-of-date method is edited in place by its owner under a new version number; the file's history keeps the earlier versions. When the work a method governs is finished, its owner retires the method rather than deleting it: the line `Retired: do not apply this method` goes directly under the title, and the method and its record stay as history. A retired method is never applied. Test material with no record worth keeping can simply be deleted.
 
@@ -88,7 +88,7 @@ An out-of-date method is edited in place by its owner under a new version number
 
 ### 4.1 Entry files
 
-Each entry is a new file in the unit's `record/` folder.
+Each entry conforming to this file format is a new file in the unit's `record/` folder. An applicable local method may designate another canonical system for its work. A skill can follow that method's permitted recording and readback procedure without creating a duplicate file record; that adaptation does not make the other system's records conform to this file format. If the required destination is unavailable, disclose the gap and hand off the unfinished step.
 
 File name: `YYYY-MM-DD-<writer>-<short-slug>.md`. The writer is the assistant's name in lower case, or a person's name when the person asked to record their own act. The slug is two to five words from the Object. If the name exists, add `-2`, `-3`.
 
@@ -101,7 +101,7 @@ Actor: the named person, or the assistant's name if it did the act
 Object: what was acted on, in a few words, worded the same way each time
 Label: a short stable name, lower case with hyphens, such as renewal-proposal-draft
 Authority: the named person who approved it, or none
-Due: YYYY-MM-DD for a commitment, otherwise -
+Due: YYYY-MM-DD for a commitment or a change to one, otherwise -
 Source: the file, meeting, email or conversation it came from, in words a person can follow
 ```
 
@@ -126,7 +126,7 @@ Several assistants cannot safely edit one shared register file: some connectors 
 
 ### 4.3 Labels and joining
 
-The first entry about a thing sets its Label. Every later entry about the same thing reuses it exactly. Before adding an entry, a writer lists the record and reads it: if an entry already records the same act (same Kind and Label, same Actor, same thing done), it adds nothing, while a later act about the same thing (a second decision, a further correction, a change) is a new entry with the same Label; if one describes the same thing under another Label, it reuses that Label.
+A Label identifies one obligation, question, proposal or decision through its history, not an entire project or topic. A separate new obligation gets its own Label even when it arises from an existing decision. For example, a decision about a trip's date and a later commitment to complete the itinerary are separate items. The first entry about an item sets its Label. Every later entry about the same thing reuses it exactly. Before adding an entry, a writer lists the record and reads it: if an entry already records the same act (same Kind and Label, same Actor, same thing done), it adds nothing, while a later act about the same thing (a second decision, a further correction, a change) is a new entry with the same Label; if one describes the same thing under another Label, it reuses that Label.
 
 Readers treat all entries in one `record/` folder with the same Kind and Label as one item, even when two assistants wrote them; when there are several, the latest is its current state.
 
@@ -157,7 +157,9 @@ An assistant starting work on a file first looks for open `pending` entries abou
 
 ## 6. Ownership
 
-Methods, records and work files stay in the firm's own stores. The only copy an assistant vendor holds is the skill text in its skill store. Corrections go to the record, never to the assistant's memory.
+Methods, records and work files remain in the firm's chosen stores. An assistant may transmit or process their contents through its host and connected services. Those services' terms, settings and retention policies govern that processing. This format does not control vendor storage or retention.
+
+Corrections belong in the applicable work record; host memory does not replace it. If a higher-priority host rule prevents the required record, disclose the conflict and the missing step rather than claiming compliance. The local method should identify the record for corrections that apply to several units.
 
 By default the organization owns the attributed record. This specification enables, without requiring, an organization to let a departing person take an anonymized extract of their own attributed entries, attested by the organization.
 

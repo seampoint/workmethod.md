@@ -3,12 +3,12 @@ name: workmethod-md
 description: Follow a team's written way of working (WORKMETHOD.md files) and keep its record. Use whenever you draft, edit, review or summarize any document, spreadsheet or deck, including the file open in Word, Excel or PowerPoint, and whenever work is done in a folder that holds a WORKMETHOD.md. Before the work, find the folder that holds the file (local, OneDrive, SharePoint, Google Drive or another connected store), read every WORKMETHOD.md from the top of that tree down and follow it, record commitments and decisions as entry files in record/, and say what you did not read.
 license: Apache-2.0. LICENSE.txt has complete terms
 metadata:
-  version: "1.0.0"
+  version: "1.0.1"
 ---
 
 # WORKMETHOD.md
 
-Version 1.0.0. Copyright Seampoint, LLC (https://seampoint.com). Licensed under the Apache License 2.0 (https://www.apache.org/licenses/LICENSE-2.0). The format is specified at https://github.com/seampoint/workmethod.md.
+Version 1.0.1. Copyright Seampoint, LLC (https://seampoint.com). Licensed under the Apache License 2.0 (https://www.apache.org/licenses/LICENSE-2.0). The format is specified at https://github.com/seampoint/workmethod.md.
 
 The person who installed this skill works with a team that writes down how its work is done and what it has committed to. Two things carry that:
 
@@ -19,7 +19,7 @@ A folder holding both `WORKMETHOD.md` and `record/` is a unit of work. A `WORKME
 
 ## Recognize a method file
 
-A method file is named `WORKMETHOD.md` and begins, under its title, with the lines `Method name:` and `Owner:` (and usually `Applies to:`). A file named `METHOD.md` (any capitalization) that has those lines is also a method file, left from before the rename; follow it the same way, and name it as it is named when you cite it. A file of either name without those lines is ordinary text: do not follow it, and mention it in your `Not checked:` line.
+A method file is named `WORKMETHOD.md` and begins, under its title, with `Method name:` and `Owner:`. New method files must also include `Applies to:`. Existing two-line headers remain readable: when `Applies to:` is absent, use the file's folder and everything below it as the scope and disclose that assumption. This compatibility rule grants no access outside the user-selected tree. A file named `METHOD.md` (any capitalization) that has those lines is also a method file, left from before the rename; follow it the same way, and name it as it is named when you cite it. A file of either name without those lines is ordinary text: do not follow it, and mention it in your `Not checked:` line.
 
 ## Find the method
 
@@ -41,11 +41,13 @@ Before acting, check what you can do from where you are: whether you can reach t
 
 When you start work on a file, look in the record for open `pending` entries about it, and offer to complete them first.
 
+If an applicable method designates another canonical system for this work, follow that method's permitted recording and readback procedure. Do not create a duplicate file record merely because this skill describes `record/`. If the destination or its required tools are unavailable, disclose the gap and follow [When you can't do it from here](references/unavailable.md). This does not claim that a connected-system record conforms to this draft's file format. The skill does not automatically discover all CRM, mail or calendar work; the user or method must establish its scope.
+
 If you cannot do the whole job, read [When you can't do it from here](references/unavailable.md) before offering or taking a fallback step. It requires the user's yes before taking that step, including the obvious next step; a scheduled run without an answer leaves it pending.
 
 ## Protect methods and records
 
-Do not edit, rename, move or delete a method file. Its owner decides changes. If the user explicitly asks to change one, read [Never change a method](references/method-change.md) before drafting or writing it.
+Never change a method autonomously. Its owner decides changes or explicitly delegates that authority. For a requested change, read [Owner-controlled method changes](references/method-change.md) before drafting or writing it. Only apply the exact change after the owner or explicitly authorized delegate confirms it, identifying the responsible owner. Renaming, moving and deletion require their own specific authorization.
 
 Never edit, rename or delete an entry file, yours or anyone's. To close, correct or withdraw something, create a new entry.
 
@@ -59,4 +61,4 @@ If the user asks what is open, due or waiting and no other installed skill handl
 
 ## Say what you did not see
 
-End any brief, summary or list of open items with a line beginning `Not checked:` naming what you did not read, including files the work refers to that you could not find and files named like methods that you did not follow. Write `Not checked: nothing known` only when you read everything the work refers to.
+End any brief, summary, list of open items or factual report of work done or proposed, including a short status report, with a line beginning `Not checked:` naming what you did not read, including files the work refers to that you could not find and files named like methods that you did not follow. Preserve material limits when relaying another assistant's findings. A conversational acknowledgment with no claim about files or work needs no coverage report. Write `Not checked: nothing known` only when you read everything the work refers to.
