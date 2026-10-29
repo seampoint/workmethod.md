@@ -53,7 +53,7 @@ Anything that reads the files can build on them: a view of what needs one person
 
 ## Versions
 
-[`VERSION`](VERSION) identifies the skill package: 1.0.2. It implements the WORKMETHOD.md 1.0 working draft, which has not been ratified as stable. Package versioning does not promise stable format compatibility. See [changes](CHANGELOG.md) and [known limits](docs/known-limits.md). Pin the reviewed release or commit when using it as an engagement reference.
+[`VERSION`](VERSION) identifies the skill package: 1.0.3. It implements the WORKMETHOD.md 1.0 working draft, which has not been ratified as stable. Package versioning does not promise stable format compatibility. See [changes](CHANGELOG.md) and [known limits](docs/known-limits.md). Pin the reviewed release or commit when using it as an engagement reference.
 
 ## License
 

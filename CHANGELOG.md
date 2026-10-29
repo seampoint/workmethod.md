@@ -1,5 +1,11 @@
 # Changes
 
+## 1.0.3 working-draft record fields
+
+- Add optional Window, Resurface, and Same as fields so a span, a raise day, and a second label can be recorded without editing an earlier entry.
+- A decision closes a proposal or correction only when it is dated at or after that entry.
+- Teach readers and the open-items procedure to use the fields. This package does not define an attention product.
+
 ## 1.0.2 working-draft packaging patch
 
 - Rename the standalone attribution file to NOTICE.txt without changing its contents, and reject unsupported or hidden resource filenames in source checks.

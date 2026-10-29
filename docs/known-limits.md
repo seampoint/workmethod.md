@@ -1,10 +1,10 @@
 # Known limits of the working draft
 
-Skill package 1.0.2 implements the WORKMETHOD.md 1.0 working draft. The format has not been ratified as stable. It states instructions for an assistant; installing it does not guarantee compliance or enable capabilities the host lacks.
+Skill package 1.0.3 implements the WORKMETHOD.md 1.0 working draft. The format has not been ratified as stable. It states instructions for an assistant; installing it does not guarantee compliance or enable capabilities the host lacks.
 
 - Reading requires access to the selected stores. Saves require a permitted writer and independent readback. The skill does not install connectors, runtimes or Workbench.
 - Automatic activation for CRM, email, calendar and other connected-system operations is not qualified. Establish the work scope and governing method explicitly. Follow a method-designated canonical system without duplicating its records; the connected system is not certified as a file-format implementation by this draft.
-- Waiting dates belong in Object prose under the current contract. Pending entries do not acquire a Due date. A changed commitment can carry its changed Due date. A new Resurface field is deferred.
+- A pending entry's Due stays `-`. A deadline that is not a commitment's Due stays in Object prose. A pending entry may carry Resurface for the day it should be raised, and a commitment may carry a Window when the obligation is a span. Neither field is inferred from a sentence. A later entry may carry Same as to join a label already written in the same record folder. Joins across folders remain out of scope.
 - Label identity is item-level, and joins remain local to one record folder. Related trees, cross-folder joins and general cross-tree duplicate discovery are not implemented by this draft.
 - A connector may not be able to update a file in place. Archive-and-replace is not a default and never applies to immutable entries. Use an authorized method procedure or disclose the gap.
 - A missing required practice can leave derived maintenance incomplete. Keep the saved canonical event and report the missing maintenance; do not claim it ran.
