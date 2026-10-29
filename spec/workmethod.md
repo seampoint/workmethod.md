@@ -1,6 +1,6 @@
 # WORKMETHOD.md: method files and work records
 
-WORKMETHOD.md 1.0 working draft, October 2026. Not yet ratified as stable. Field names and rules may change until the format is ratified. Skill package 1.0.3 implements this draft; the package version does not promise format stability.
+WORKMETHOD.md 1.0 working draft, October 2026. Not yet ratified as stable. Field names and rules may change until the format is ratified. Skill package 1.1.0 implements this draft; the package version does not promise format stability.
 
 ## 1. Purpose
 
@@ -122,6 +122,29 @@ Same as: the other label, lower case with hyphens
 - `Window` is a span on a commitment, or on a change to one. The start and the end are inclusive. While a reader's date is inside the span, the commitment is in view and is not overdue. After the end, it is overdue. Before the start, it is not yet in view. When the obligation is a span rather than one day, Due stays `-`. When Due is a date, that date remains the deadline.
 - `Resurface` is the day a pending entry should be raised. It is not a deadline. Due stays `-`. Before that day the pending is open and not yet raised. On or after that day it is raised, and it is not overdue because the day arrived.
 - `Same as` names the label a later entry belongs with, when an earlier entry used a different label and cannot be edited. Readers group the entry with the named label in the same record folder. The field does not close anything and does not change Due.
+- A `Same as` join is one step. It names the item's own label, never a label that is itself joined to another. If the named label appears on no entry in the same record folder, or the entry names its own label, readers ignore the join, keep the entry under its own label and report the broken join. Readers never follow a chain or a loop.
+
+For example, a commitment kept within a span, a pending raised on a stated day, and a later entry joined to an earlier label:
+
+```
+Kind: commitment
+Label: dock-survey
+Due: -
+Window: 2026-11-02/2026-11-06
+```
+
+```
+Kind: pending
+Label: crew-availability
+Due: -
+Resurface: 2026-11-03
+```
+
+```
+Kind: done
+Label: dock-survey-booking
+Same as: dock-survey
+```
 
 These fields give a reader dates and joins it can compare, so attention over the record does not depend on reading them out of a sentence. Any other field is allowed. Readers ignore fields they do not know. Writers keep the order above, then these optional fields, then any extension fields where the extension puts them.
 
@@ -146,7 +169,7 @@ Before applying status, readers join an entry that carries `Same as` to the name
 
 - A `commitment` is open until a `done` entry with the same joined label follows it.
 - A `pending` entry is open until a `done` entry with the same joined label follows it.
-- A `proposal` or `correction` is open until a `decision` entry with the same joined label, by the method owner or a person the method names, accepts or rejects it. The decision counts only when its Date is the same moment as that entry or later. A proposal or correction written after the decision is open until a decision dated at or after the later entry.
+- A `proposal` or `correction` is open until a `decision` entry with the same joined label, by the method owner or a person the method names, accepts or rejects it. The decision counts only when its Date is the same moment as that entry or later. A proposal or correction written after the decision is open until a decision dated at or after the later entry. A writer never gives a proposal or correction the same Date as a decision it follows; it uses the next minute, so that a reader can always tell which came first.
 - A `change` records that a person altered something an assistant drafted; it closes nothing.
 - A `note` is information; it opens nothing.
 
