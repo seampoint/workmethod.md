@@ -1,5 +1,14 @@
 # Changes
 
+## 1.1.0 working-draft record fields
+
+- Add optional Window, Resurface, and Same as fields so a span, a raise day, and a second label can be recorded without editing an earlier entry.
+- A decision closes a proposal or correction only when it is dated at or after that entry.
+- Teach readers and the open-items procedure to use the fields. This package does not define an attention product.
+- A Same as join is one step: chains, loops and joins to a label not in the folder are ignored and reported.
+- A writer never gives a proposal or correction the same Date as a decision it follows.
+- Minor version: new optional record fields are a format addition. Readers that ignore them still read every entry.
+
 ## 1.0.2 working-draft packaging patch
 
 - Rename the standalone attribution file to NOTICE.txt without changing its contents, and reject unsupported or hidden resource filenames in source checks.
