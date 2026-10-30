@@ -59,6 +59,12 @@ Anything that reads the files can build on them: a view of what needs one person
 
 Apache License 2.0; see [`LICENSE`](LICENSE) and [`NOTICE`](NOTICE). The template is CC0. Method files and records you write are yours. See [`TRADEMARKS.md`](TRADEMARKS.md) for names.
 
+Using the WORKMETHOD.md format or its CC0 template does not give Seampoint any ownership of your method documents, records, or other work files, and does not require you to publish them or apply an open-source license to them.
+
+Ownership remains with the applicable rights holders under law and any employment, client, or other agreements. The `Owner:` field identifies who may approve changes to a method; it does not determine copyright ownership.
+
+If you copy material from the Apache-licensed specification, skill, or examples, the applicable license obligations for that material still apply.
+
 ## Maintainer and feedback
 
 Seampoint, LLC maintains this draft. Report fictional minimal reproductions through [GitHub issues](https://github.com/seampoint/workmethod.md/issues); do not include private work files, personal data or credentials. Maintainer responsibility does not confer authority over a user's methods or create a support entitlement. Use a separately agreed service arrangement for paid assistance.
