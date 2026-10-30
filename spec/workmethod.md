@@ -211,3 +211,9 @@ The format is meant to be read by more than the assistant doing the work. Exampl
 ## 9. License
 
 This specification is licensed under the Apache License 2.0. The template in `templates/` is dedicated to the public domain under CC0 1.0. Method files and records you write are yours.
+
+Using the WORKMETHOD.md format or its CC0 template does not give Seampoint any ownership of your method documents, records, or other work files, and does not require you to publish them or apply an open-source license to them.
+
+Ownership remains with the applicable rights holders under law and any employment, client, or other agreements. The `Owner:` field identifies who may approve changes to a method; it does not determine copyright ownership.
+
+If you copy material from the Apache-licensed specification, skill, or examples, the applicable license obligations for that material still apply.
