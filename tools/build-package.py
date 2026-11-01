@@ -24,7 +24,7 @@ def make(name, files, base):
     return {'file':name,'sha256':hashlib.sha256(path.read_bytes()).hexdigest(),
             'bytes':path.stat().st_size,'entries':len(files)}
 
-result={'package_version':VERSION,'format_status':'WORKMETHOD.md 1.0 working draft',
+result={'package_version':VERSION,'format_status':'WORKMETHOD.md 1.1 working draft',
         'artifacts':[make(f'workmethod-md-{VERSION}-skill.zip',skill_files,skill.parent),
                      make(f'workmethod-md-{VERSION}-claude.zip',plugin_files,ROOT)]}
 (OUT/'checksums.json').write_text(json.dumps(result,indent=2)+'\n')

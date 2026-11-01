@@ -1,5 +1,14 @@
 # Changes
 
+## 1.1.1 working-draft alignment patch
+
+- Label the format the WORKMETHOD.md 1.1 working draft, since 1.1.0 added the optional Window, Resurface and Same as fields.
+- Bring the open-items procedure into line with the specification on joins: a join is one step, a join to a label not in the folder or to the entry's own label is ignored and reported, and chains and loops are never followed.
+- Say in the skill that only the method's owner or a person the method names closes a proposal or correction.
+- Say where optional fields go: after Method, in the order Window, Resurface, Same as, then any extension fields.
+- When a declared record extension is unknown and the method asks for it, add a note entry saying so.
+- The specification's fields and rules, the entry format and the examples are unchanged.
+
 ## 1.1.0 working-draft record fields
 
 - Add optional Window, Resurface, and Same as fields so a span, a raise day, and a second label can be recorded without editing an earlier entry.
