@@ -1,6 +1,6 @@
 # WORKMETHOD.md: method files and work records
 
-WORKMETHOD.md 1.1 working draft, October 2026. Not yet ratified as stable. Field names and rules may change until the format is ratified. Version 1.1 adds the optional Window, Resurface and Same as fields to the 1.0 draft; readers that ignore them still read every entry. Skill package 1.1.1 implements this draft; the package version does not promise format stability.
+WORKMETHOD.md 1.2 working draft (proposed), November 2026. Not yet ratified as stable. Field names and rules may change until the format is ratified. Version 1.1 added the optional Window, Resurface and Same as fields to the 1.0 draft. Version 1.2 proposes numbered rules with reasons, the sources a rule rests on, fixed rules that a nearer method cannot loosen, and an optional Rule field on entries; readers that ignore the new field still read every entry. Skill package 1.1.1 implements the 1.1 draft and this proposal's skill changes; the package version does not promise format stability.
 
 ## 1. Purpose
 
@@ -56,7 +56,7 @@ The sections below are recognised by name. All are optional; a method holds only
 
 | Section | What it holds |
 |---|---|
-| Rules | One instruction per line. A rule that overrides a rule in a method above says so: "This replaces rule 2 of the clients method for this project." |
+| Rules | One numbered instruction per line, written as 3.2.1 describes. A rule that overrides a rule in a method above says so: "This replaces rule 2 of the clients method for this project." |
 | Decisions that belong to people | The decisions that need a named person before the act happens, each with the person who makes it. Everything not listed is routine. |
 | Who can decide | The owner, plus any other named person and what they may decide. |
 | The record | Where entries go, any labelling rule for this work, and any record extension (section 4.5). |
@@ -66,9 +66,32 @@ Applications built on this format may recognise further sections. Readers ignore
 
 Decisions must be named concretely enough that someone new could tell whether a given act is on the list. "Any price" is ambiguous; "any price, discount or term quoted to a client; prices inside the internal pricing model are routine until quoted" is not.
 
+#### 3.2.1 Writing rules
+
+Rules are numbered. A rule keeps its number for as long as it exists, across versions; a removed rule's number is not reused, so a writer either leaves the line as `3. Removed in v7.` or skips the number. Other methods, entries and people cite a rule as `<method name> rule <n>`, such as `accounts rule 2`, and with its version where the version matters, such as `accounts v3 rule 2`.
+
+A rule line may carry up to three labelled parts, in this order:
+
+- `Fixed:` at the start of the line marks a rule that methods below cannot replace or loosen (3.3).
+- `Because:` after the instruction gives the reason for it. A reason lets a person apply the rule to a case it did not foresee, and lets the owner see when a rule has outlived its purpose. Writers give a reason wherever one is not obvious.
+- `Rests on:` names what the rule depends on: a regulation, contract, standard, policy or other document, in words a person can follow, with a link where there is one. It tells a reviewer where to check the rule and tells the owner what to watch for change.
+
+For example:
+
+```
+## Rules
+
+1. Every figure in the proposal comes from `model.xlsx`, never typed by hand. Because: figures typed by hand drift from the model between drafts.
+2. Fixed: no payment over $25,000 is released without two approvers. Because: one person should never be able to move that much money alone. Rests on: the finance policy, section 3.
+```
+
+The reason and the source are part of the rule. A reader applies the instruction; it uses the reason to interpret the instruction in a case the instruction does not settle, and never to set the instruction aside.
+
 ### 3.3 Which methods apply, and which wins
 
 For a piece of work, an assistant reads every method file on the path from the top of the tree down to the folder holding the work, and follows all of them. The top of the tree is the folder the user named, or the top of the drive if they named none. Where two methods conflict, the one nearer the work wins. Overrides should say so explicitly.
+
+A fixed rule (3.2.1) is the exception. It binds every folder below its method. A nearer method may add to it or make it stricter, and may not replace or loosen it. When a nearer rule conflicts with a fixed rule, or when it is unclear whether the nearer rule is stricter, the reader follows the fixed rule, tells the user about the conflict, and names the owners of both methods. Only the fixed rule's owner changes it, under 3.6.
 
 ### 3.4 Methods and skills
 
@@ -111,7 +134,7 @@ One optional field is recommended:
 Method: every method in force on the path to this work, nearest first, each with its version, separated by semicolons
 ```
 
-Three further fields are optional. A writer adds one only when the person stated the fact. A writer does not invent a date or a join. Old entries stay as written.
+Three further fields are optional. A writer adds one only when the person stated the fact. A writer does not invent a date or a join. Old entries stay as written. A fourth optional field, `Rule`, is described after them.
 
 ```
 Window: YYYY-MM-DD/YYYY-MM-DD
@@ -146,7 +169,16 @@ Label: dock-survey-booking
 Same as: dock-survey
 ```
 
-These fields give a reader dates and joins it can compare, so attention over the record does not depend on reading them out of a sentence. Any other field is allowed. Readers ignore fields they do not know. Writers keep the order above, then these optional fields, then any extension fields where the extension puts them.
+One more optional field names the rule an entry applied:
+
+```
+Rule: the rule or rules the act applied, each as <method name> v<number> rule <n>, separated by semicolons
+```
+
+- A writer adds `Rule` only when the act clearly turned on a specific rule: the act followed it, a person departed from it, or a correction or proposal is about it. A writer never guesses which rule applied, and never lists every rule in force; that is what `Method` is for.
+- A departure from a rule is recorded with the person who decided it as Authority, as for any decision.
+
+These fields give a reader dates, joins and rules it can compare, so attention over the record does not depend on reading them out of a sentence. Any other field is allowed. Readers ignore fields they do not know. Writers keep the order above, then these optional fields in the order Window, Resurface, Same as, Rule, then any extension fields where the extension puts them.
 
 - The Date is local time on a 24-hour clock, with nothing after it.
 - Only a person decides. An assistant never makes a decision a method reserves for a person, nor a consequential one (a price or term, anything sent outside the firm, a people decision, anything that cannot be undone); it brings the decision to the person and waits.
@@ -200,7 +232,7 @@ By default the organization owns the attributed record. This specification enabl
 
 ## 7. Applications
 
-The format is meant to be read by more than the assistant doing the work. Examples: a view of what deserves one person's attention across every method and record they can reach; a review that checks the record against the decisions each method reserves for people; a comparison of assistants working under the same methods. Applications may define their own method sections and record extensions under 3.2 and 4.5. Seampoint Workbench is one such application.
+The format is meant to be read by more than the assistant doing the work. Examples: a view of what deserves one person's attention across every method and record they can reach; a review that checks the record against the decisions each method reserves for people; a review of which rules are applied, departed from or corrected, so an owner can see which rules need work; a comparison of assistants working under the same methods. Applications may define their own method sections and record extensions under 3.2 and 4.5. Seampoint Workbench is one such application.
 
 ## 8. Open questions
 

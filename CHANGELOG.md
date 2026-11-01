@@ -1,5 +1,15 @@
 # Changes
 
+## 1.2.0 working-draft rules (proposed)
+
+- Number rules and keep each number for as long as the rule exists, so overrides, entries and reviews can cite `<method name> rule <n>` reliably.
+- Let a rule carry its reason (`Because:`) and what it rests on (`Rests on:`). A reason helps a person apply a rule to a case it did not foresee; it never sets the rule aside.
+- Add fixed rules (`Fixed:`). Methods below may add to a fixed rule or make it stricter, never replace or loosen it. A reader that finds a conflict follows the fixed rule and tells the user. This narrows the nearest-method-wins rule for thresholds and limits that a team or project must not relax.
+- Add an optional `Rule` field naming the rule an entry applied or departed from, written only when the act clearly turned on that rule.
+- Add rule reviews to the applications in section 7.
+- Readers that ignore `Rule` still read every entry. A reader that does not know `Fixed:` may follow a nearer method that loosens a fixed rule, so this is a format change readers should adopt.
+- Package version numbers are unchanged until release.
+
 ## 1.1.1 working-draft alignment patch
 
 - Label the format the WORKMETHOD.md 1.1 working draft, since 1.1.0 added the optional Window, Resurface and Same as fields.
