@@ -21,7 +21,9 @@ Source: the file, meeting, email or conversation it came from, in words a person
 Method: every method in force on the path to this work, nearest first, each with its version and separated by semicolons, such as harbor-renewal v6; clients v3, or none if you found no method
 ```
 
-Record extensions: if a method in force declares a record extension (a line such as `Record extension: <name>` in its "The record" section), add the fields that extension requires, where it says to put them. If another installed skill defines that extension, follow it. If you do not know the extension, write the lines above, and tell the user which extension's fields you could not add.
+Add an optional field (`Window`, `Resurface`, `Same as`) only as described below. Put any you add after `Method`, in that order, then any extension fields where the extension puts them.
+
+Record extensions: if a method in force declares a record extension (a line such as `Record extension: <name>` in its "The record" section), add the fields that extension requires, where it says to put them. If another installed skill defines that extension, follow it. If you do not know the extension, write the lines above, and tell the user which extension's fields you could not add. If the method asks for it, also add a `note` entry saying so.
 
 Rules for entries:
 
@@ -36,7 +38,7 @@ Rules for entries:
 - Record a commitment only in the name of the person who made it, or in your own name for what you will do. When work waits on someone who has not agreed to do it, add a `pending` entry instead: the person waiting is the Actor, and the Object says whom they wait on, for what, and by when. If that person agrees, record their commitment then.
 - A `done` entry repeats the Label of the commitment or pending entry it closes.
 - When the user changes something you drafted, add a `change` entry: the user as Actor, what changed as Object, the reason in Source if given. A `change` entry about a commitment gives in Due the commitment's due date after the change; `-` means it no longer has one.
-- A decision closes a proposal or correction only when its Date is at or after that entry. A correction you record after the decision stays open until a later decision. Never give that correction the same Date as the decision; use the next minute.
+- A decision closes a proposal or correction only when the method's owner or a person the method names made it, and its Date is at or after that entry. A correction you record after the decision stays open until a later decision. Never give that correction the same Date as the decision; use the next minute.
 - When anyone tells you how work is done here (a correction, "always", "never"), add a `correction` entry in the unit you are working in, naming in the Object which method it concerns. Host memory does not replace the applicable work record. If a higher-priority host rule prevents the record, disclose the conflict and the missing step; do not bypass that rule or claim compliance. The governing method should name a record for tree-wide corrections. Tell the user the method's owner decides whether the correction becomes part of the method.
 - New commitments and decisions from notes or conversation go in the record, not only in what you write for the user.
 - If you cannot create files in the folder, say so and give the user the exact entry text.

@@ -41,3 +41,7 @@ The Free account’s usage limit interrupted the final compatibility answer and 
 An independent audit of the downloaded fourteen-file snapshot verified every exported hash, all five original records unchanged, ten original files unchanged, exactly one new commitment with no duplicate, and separate approval and authorized-act entries. The only modified original was the method, containing exactly the approved sentence and version bump. The export also confirmed that no draft proposal entry or method-history snapshot had been saved. Resumption completed the audit; it did not repair or erase the original behavioral gaps.
 
 This was one fixture, session and model setting; it did not qualify repeatability, live connectors, updates or customer use. The package’s instruction rules are unchanged from 1.0.1; the changes are version markers, notice filename, archive layout and packaging checks.
+
+## Public source access (October 31, 2026)
+
+An unauthenticated request returned the repository page and the raw specification from `main`. This completes the source-access check that the October 26 record could not run while the repository was private. Marketplace installation, automatic updates, other hosts and real customer workflows remain unqualified.

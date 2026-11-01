@@ -1,6 +1,6 @@
 # WORKMETHOD.md: method files and work records
 
-WORKMETHOD.md 1.0 working draft, October 2026. Not yet ratified as stable. Field names and rules may change until the format is ratified. Skill package 1.1.0 implements this draft; the package version does not promise format stability.
+WORKMETHOD.md 1.1 working draft, October 2026. Not yet ratified as stable. Field names and rules may change until the format is ratified. Version 1.1 adds the optional Window, Resurface and Same as fields to the 1.0 draft; readers that ignore them still read every entry. Skill package 1.1.1 implements this draft; the package version does not promise format stability.
 
 ## 1. Purpose
 
