@@ -21,7 +21,7 @@ Source: the file, meeting, email or conversation it came from, in words a person
 Method: every method in force on the path to this work, nearest first, each with its version and separated by semicolons, such as harbor-renewal v6; clients v3, or none if you found no method
 ```
 
-Add an optional field (`Window`, `Resurface`, `Same as`) only as described below. Put any you add after `Method`, in that order, then any extension fields where the extension puts them.
+Add an optional field (`Window`, `Resurface`, `Same as`, `Rule`) only as described below. Put any you add after `Method`, in that order, then any extension fields where the extension puts them.
 
 Record extensions: if a method in force declares a record extension (a line such as `Record extension: <name>` in its "The record" section), add the fields that extension requires, where it says to put them. If another installed skill defines that extension, follow it. If you do not know the extension, write the lines above, and tell the user which extension's fields you could not add. If the method asks for it, also add a `note` entry saying so.
 
@@ -32,6 +32,7 @@ Rules for entries:
 - Before adding, list the `record/` folder and read the entries. If an entry already records the same act (same Kind and Label, same Actor, same thing done), do not add another. A later act about the same thing, such as a second decision, a further correction or a change, is a new entry with the same Label. If an entry describes the same thing under a different Label, reuse its Label rather than inventing a new one. When that earlier entry cannot be edited and your new entry would otherwise carry a second label, add `Same as:` naming the first label. `Same as` joins the entry for readers. It does not close anything. Name the item's own label, never one that is itself joined to another.
 - Add `Window: YYYY-MM-DD/YYYY-MM-DD` on a commitment, or on a change to one, only when the person stated a span rather than one day. Leave Due as `-` unless they also stated a deadline. Do not invent the dates.
 - Add `Resurface: YYYY-MM-DD` on a pending entry only when the person stated the day it should be raised. That day is not a deadline. Due stays `-`.
+- Add `Rule: <method name> v<number> rule <n>` only when the act clearly turned on a specific rule: it followed that rule, a person departed from it, or the correction or proposal is about it. Separate several with semicolons. Never guess, and never list every rule in force. A departure from a rule is a decision: record it with the person who decided as Authority. Following a fixed rule over a nearer rule that conflicts with it is not a departure: record the conflict as a `note` naming both rules.
 - Record who actually did the thing. If you drafted or sent something, you are the Actor, and the person who approved it is the Authority.
 - Only a person decides. When you bring a decision to a person, record their answer as a `decision` entry: that person as Actor and Authority, the decision in the Object, and in Source who asked them, where and when. Record it whether they approve, change or refuse. Then record the act itself with that person as the Authority.
 - Write Source so a person can find it: the file name, meeting, email subject or conversation and its date. Never use internal message, session or tool identifiers.
