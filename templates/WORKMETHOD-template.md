@@ -24,7 +24,7 @@ Applies to: this folder and everything below it
 2. <If a rule replaces a rule in a method above this folder, say so: "This replaces rule 2 of the clients method for this project.">
 3. <If methods below this folder must not loosen a rule, start it with "Fixed:". If the rule depends on a regulation, contract, standard or policy, name it after "Rests on:".>
 
-<Keep each rule's number for as long as the rule exists. When you remove a rule, write "Removed in v<number>." on its line or skip its number; never give the number to a different rule.>
+<Keep each rule's number for as long as the rule exists. When you remove a rule, leave its line as "Removed in v<number>." rather than skipping the number; never give the number to a different rule.>
 
 ## Practices we use
 

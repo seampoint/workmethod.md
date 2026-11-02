@@ -1,6 +1,6 @@
 # WORKMETHOD.md: method files and work records
 
-WORKMETHOD.md 1.2 working draft (proposed), November 2026. Not yet ratified as stable. Field names and rules may change until the format is ratified. Version 1.1 added the optional Window, Resurface and Same as fields to the 1.0 draft. Version 1.2 proposes numbered rules with reasons, the sources a rule rests on, fixed rules that a nearer method cannot loosen, and an optional Rule field on entries; readers that ignore the new field still read every entry. Skill package 1.1.1 implements the 1.1 draft and this proposal's skill changes; the package version does not promise format stability.
+WORKMETHOD.md 1.2 working draft (proposed), November 2026. Not yet ratified as stable. Field names and rules may change until the format is ratified. Version 1.1 added the optional Window, Resurface and Same as fields to the 1.0 draft. Version 1.2 proposes numbered rules with reasons, the sources a rule rests on, fixed rules that a nearer method cannot loosen, and an optional Rule field on entries; readers that ignore the new field still read every entry. Released skill package 1.1.1 implements the 1.1 draft; the skill source in this repository carries this proposal ahead of a release. The package version does not promise format stability.
 
 ## 1. Purpose
 
@@ -68,7 +68,7 @@ Decisions must be named concretely enough that someone new could tell whether a 
 
 #### 3.2.1 Writing rules
 
-Rules are numbered. A rule keeps its number for as long as it exists, across versions; a removed rule's number is not reused, so a writer either leaves the line as `3. Removed in v7.` or skips the number. Other methods, entries and people cite a rule as `<method name> rule <n>`, such as `accounts rule 2`, and with its version where the version matters, such as `accounts v3 rule 2`.
+Rules are numbered. A rule keeps its number for as long as it exists, across versions; a removed rule's number is not reused. A writer leaves a removed rule's line in place as `3. Removed in v7.` rather than skipping the number, because Markdown renders a numbered list in sequence and a skipped number would shift every later rule's displayed number. Other methods, entries and people cite a rule as `<method name> rule <n>`, such as `accounts rule 2`, and with its version where the version matters, such as `accounts v3 rule 2`.
 
 A rule line may carry up to three labelled parts, in this order:
 
@@ -91,7 +91,7 @@ The reason and the source are part of the rule. A reader applies the instruction
 
 For a piece of work, an assistant reads every method file on the path from the top of the tree down to the folder holding the work, and follows all of them. The top of the tree is the folder the user named, or the top of the drive if they named none. Where two methods conflict, the one nearer the work wins. Overrides should say so explicitly.
 
-A fixed rule (3.2.1) is the exception. It binds every folder below its method. A nearer method may add to it or make it stricter, and may not replace or loosen it. When a nearer rule conflicts with a fixed rule, or when it is unclear whether the nearer rule is stricter, the reader follows the fixed rule, tells the user about the conflict, and names the owners of both methods. Only the fixed rule's owner changes it, under 3.6.
+A fixed rule (3.2.1) is the exception. It binds every folder below its method. A nearer method may add to it or make it stricter, and may not replace or loosen it. A nearer rule is stricter only when every act it allows, the fixed rule also allows. When a nearer rule conflicts with a fixed rule, or when it is unclear whether the nearer rule is stricter, the reader follows the fixed rule, tells the user about the conflict, and names the owners of both methods. Only the fixed rule's owner changes it, under 3.6.
 
 ### 3.4 Methods and skills
 
@@ -103,7 +103,7 @@ A method file is the user's own instruction because the user installed the skill
 
 ### 3.6 Change
 
-The method's owner decides changes, or explicitly delegates that authority. An assistant never changes a method autonomously. It may draft a requested change, show the exact change to the owner or explicitly authorized delegate, and apply it only after that person confirms it. The confirmation must identify the responsible owner. Preserve the earlier version in file history, raise the method version for a rule or decision-maker change, and record the decision and authorized act. This is not permission to rename, move or delete a method without specific authorization. A correction from anyone goes into the record as a `correction` entry; it does not itself change the method.
+The method's owner decides changes, or explicitly delegates that authority. An assistant never changes a method autonomously. It may draft a requested change, show the exact change to the owner or explicitly authorized delegate, and apply it only after that person confirms it. The confirmation must identify the responsible owner. Preserve the earlier version in file history, raise the method version for a rule or decision-maker change, and record the decision and authorized act. Removing a rule, and marking a rule `Fixed:` or removing that mark, are rule changes; existing rule numbers do not change (3.2.1). This is not permission to rename, move or delete a method without specific authorization. A correction from anyone goes into the record as a `correction` entry; it does not itself change the method.
 
 An out-of-date method is edited in place by its owner under a new version number; the file's history keeps the earlier versions. When the work a method governs is finished, its owner retires the method rather than deleting it: the line `Retired: do not apply this method` goes directly under the title, and the method and its record stay as history. A retired method is never applied. Test material with no record worth keeping can simply be deleted.
 
@@ -176,7 +176,7 @@ Rule: the rule or rules the act applied, each as <method name> v<number> rule <n
 ```
 
 - A writer adds `Rule` only when the act clearly turned on a specific rule: the act followed it, a person departed from it, or a correction or proposal is about it. A writer never guesses which rule applied, and never lists every rule in force; that is what `Method` is for.
-- A departure from a rule is recorded with the person who decided it as Authority, as for any decision.
+- A departure from a rule is recorded with the person who decided it as Authority, as for any decision. Following a fixed rule over a nearer rule that conflicts with it is not a departure; the writer records the conflict as a `note` naming both rules.
 
 These fields give a reader dates, joins and rules it can compare, so attention over the record does not depend on reading them out of a sentence. Any other field is allowed. Readers ignore fields they do not know. Writers keep the order above, then these optional fields in the order Window, Resurface, Same as, Rule, then any extension fields where the extension puts them.
 

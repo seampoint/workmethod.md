@@ -7,7 +7,9 @@
 - Add fixed rules (`Fixed:`). Methods below may add to a fixed rule or make it stricter, never replace or loosen it. A reader that finds a conflict follows the fixed rule and tells the user. This narrows the nearest-method-wins rule for thresholds and limits that a team or project must not relax.
 - Add an optional `Rule` field naming the rule an entry applied or departed from, written only when the act clearly turned on that rule.
 - Add rule reviews to the applications in section 7.
-- Readers that ignore `Rule` still read every entry. A reader that does not know `Fixed:` may follow a nearer method that loosens a fixed rule, so this is a format change readers should adopt.
+- Readers that ignore `Rule` still read every entry. `Fixed:` changes precedence: a reader that does not know it applies nearest-method-wins and follows a nearer rule that loosens a fixed rule. A method owner cannot rely on a fixed rule until the assistants reading that tree implement this draft.
+- A nearer rule counts as stricter only when every act it allows, the fixed rule also allows. Following a fixed rule over a conflicting nearer rule is recorded as a note, not as a departure.
+- A removed rule keeps its line as `Removed in v<number>.` Skipping the number is not allowed, because rendered Markdown renumbers the list.
 - Package version numbers are unchanged until release.
 
 ## 1.1.1 working-draft alignment patch
