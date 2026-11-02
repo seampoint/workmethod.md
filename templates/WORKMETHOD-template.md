@@ -20,7 +20,7 @@ Applies to: this folder and everything below it
 
 ## Rules
 
-1. <One rule per line, written as an instruction. Say what to do, not what to value. Give the reason after "Because:" when it is not obvious, naming what goes wrong if the rule is not followed: "Because: figures typed by hand drift from the model between drafts.">
+1. <One rule per line, written as an instruction. Say what to do, not what to value. Give the reason after "Because:" when it is not obvious, naming what following it protects or gains: "Because: figures typed by hand drift from the model between drafts.">
 2. <If a rule replaces a rule in a method above this folder, say so: "This replaces rule 2 of the clients method for this project.">
 3. <If methods below this folder must not loosen a rule, start it with "Fixed:". If the rule depends on a regulation, contract, standard or policy, name it after "Rests on:".>
 

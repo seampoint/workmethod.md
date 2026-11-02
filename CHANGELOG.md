@@ -3,7 +3,7 @@
 ## 1.2.0 working-draft rules (proposed)
 
 - Number rules and keep each number for as long as the rule exists, so overrides, entries and reviews can cite `<method name> rule <n>` reliably.
-- Let a rule carry its reason (`Because:`) and what it rests on (`Rests on:`). A reason helps a person apply a rule to a case it did not foresee; it never sets the rule aside. A good reason names what goes wrong if the rule is not followed: the work fails, someone is harmed, or the work gets harder.
+- Let a rule carry its reason (`Because:`) and what it rests on (`Rests on:`). A reason helps a person apply a rule to a case it did not foresee; it never sets the rule aside. A good reason names what following the rule protects or gains: a failure or harm it prevents, an option it keeps open, or a better result it makes possible.
 - Add fixed rules (`Fixed:`). Methods below may add to a fixed rule or make it stricter, never replace or loosen it. A reader that finds a conflict follows the fixed rule and tells the user. This narrows the nearest-method-wins rule for thresholds and limits that a team or project must not relax.
 - Add an optional `Rule` field naming the rule an entry applied or departed from, written only when the act clearly turned on that rule.
 - Add rule reviews to the applications in section 7.
