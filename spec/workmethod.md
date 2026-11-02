@@ -73,7 +73,7 @@ Rules are numbered. A rule keeps its number for as long as it exists, across ver
 A rule line may carry up to three labelled parts, in this order:
 
 - `Fixed:` at the start of the line marks a rule that methods below cannot replace or loosen (3.3).
-- `Because:` after the instruction gives the reason for it. A reason lets a person apply the rule to a case it did not foresee, and lets the owner see when a rule has outlived its purpose. Writers give a reason wherever one is not obvious.
+- `Because:` after the instruction gives the reason for it. A reason lets a person apply the rule to a case it did not foresee, and lets the owner see when a rule has outlived its purpose. Writers give a reason wherever one is not obvious. A good reason names what following the rule protects or gains: a failure or harm it prevents, an option it keeps open, or a better result it makes possible.
 - `Rests on:` names what the rule depends on: a regulation, contract, standard, policy or other document, in words a person can follow, with a link where there is one. It tells a reviewer where to check the rule and tells the owner what to watch for change.
 
 For example:
