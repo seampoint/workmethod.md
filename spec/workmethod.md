@@ -1,6 +1,6 @@
 # WORKMETHOD.md: method files and work records
 
-WORKMETHOD.md 1.2 working draft (proposed), November 2026. Not yet ratified as stable. Field names and rules may change until the format is ratified. Version 1.1 added the optional Window, Resurface and Same as fields to the 1.0 draft. Version 1.2 proposes numbered rules with reasons, the sources a rule rests on, fixed rules that a nearer method cannot loosen, and an optional Rule field on entries; readers that ignore the new field still read every entry. Released skill package 1.1.1 implements the 1.1 draft; the skill source in this repository carries this proposal ahead of a release. The package version does not promise format stability.
+WORKMETHOD.md 1.2 working draft, November 2026. Not yet ratified as stable. Field names and rules may change until the format is ratified. Version 1.1 added the optional Window, Resurface and Same as fields to the 1.0 draft. Version 1.2 proposes numbered rules with reasons, the sources a rule rests on, fixed rules that a nearer method cannot loosen, and an optional Rule field on entries; readers that ignore the new field still read every entry. Skill package 1.2.0 implements this draft. The package version does not promise format stability.
 
 ## 1. Purpose
 

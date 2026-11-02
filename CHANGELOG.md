@@ -1,6 +1,6 @@
 # Changes
 
-## 1.2.0 working-draft rules (proposed)
+## 1.2.0 working-draft rules
 
 - Number rules and keep each number for as long as the rule exists, so overrides, entries and reviews can cite `<method name> rule <n>` reliably.
 - Let a rule carry its reason (`Because:`) and what it rests on (`Rests on:`). A reason helps a person apply a rule to a case it did not foresee; it never sets the rule aside. A good reason names what following the rule protects or gains: a failure or harm it prevents, an option it keeps open, or a better result it makes possible.
@@ -10,7 +10,6 @@
 - Readers that ignore `Rule` still read every entry. `Fixed:` changes precedence: a reader that does not know it applies nearest-method-wins and follows a nearer rule that loosens a fixed rule. A method owner cannot rely on a fixed rule until the assistants reading that tree implement this draft.
 - A nearer rule counts as stricter only when every act it allows, the fixed rule also allows. Following a fixed rule over a conflicting nearer rule is recorded as a note, not as a departure.
 - A removed rule keeps its line as `Removed in v<number>.` Skipping the number is not allowed, because rendered Markdown renumbers the list.
-- Package version numbers are unchanged until release.
 
 ## 1.1.1 working-draft alignment patch
 
