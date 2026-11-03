@@ -7,6 +7,13 @@ A team's working rules, and its record of what it decided and promised, in plain
 
 The assistant reads the methods from the top of the tree down, follows them, brings reserved decisions to the named person instead of making them, and writes the record. Change assistants and the rules and the record stay with you.
 
+## Download
+
+- **[workmethod-md-skill.zip](https://github.com/seampoint/workmethod.md/releases/latest/download/workmethod-md-skill.zip)**: the skill, for an assistant that accepts a skill upload.
+- **[workmethod-md-claude.zip](https://github.com/seampoint/workmethod.md/releases/latest/download/workmethod-md-claude.zip)**: the same skill as a Claude plugin.
+
+These links always fetch the latest release. Each release's notes, versioned files and SHA-256 checksums are on the [releases page](https://github.com/seampoint/workmethod.md/releases). Download the ZIP and upload it as it is; do not unzip it first.
+
 ## What is here
 
 | Path | What it is | License |
