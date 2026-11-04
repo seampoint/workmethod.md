@@ -1,6 +1,6 @@
 # WORKMETHOD.md: method files and work records
 
-WORKMETHOD.md 1.2 working draft, November 2026. Not yet ratified as stable. Field names and rules may change until the format is ratified. Version 1.1 added the optional Window, Resurface and Same as fields to the 1.0 draft. Version 1.2 proposes numbered rules with reasons, the sources a rule rests on, fixed rules that a nearer method cannot loosen, and an optional Rule field on entries; readers that ignore the new field still read every entry. Skill package 1.2.0 implements this draft. The package version does not promise format stability.
+WORKMETHOD.md 1.2 working draft, November 2026. Not yet ratified as stable. Field names and rules may change until the format is ratified. Version 1.1 added the optional Window, Resurface and Same as fields to the 1.0 draft. Version 1.2 proposes numbered rules with reasons, the sources a rule rests on, fixed rules that a nearer method cannot loosen, and an optional Rule field on entries; readers that ignore the new field still read every entry. Skill package 1.2.1 implements this draft. The package version does not promise format stability.
 
 ## 1. Purpose
 
@@ -89,7 +89,7 @@ The reason and the source are part of the rule. A reader applies the instruction
 
 ### 3.3 Which methods apply, and which wins
 
-For a piece of work, an assistant reads every method file on the path from the top of the tree down to the folder holding the work, and follows all of them. The top of the tree is the folder the user named, or the top of the drive if they named none. Where two methods conflict, the one nearer the work wins. Overrides should say so explicitly.
+For a piece of work, an assistant reads every method file on the path from the top of the tree down to the folder holding the work, and follows all of them. The top of the tree is the folder the user named, or the top of the drive if they named none. Where two methods conflict, the one nearer the work wins. Overrides should say so explicitly. When two methods that both apply conflict and neither is nearer the work, neither wins: the reader names the conflicting rules and both methods, asks the user which to follow, and suggests taking the conflict to the owners of both methods, or to a person a method names to look after its methods.
 
 A fixed rule (3.2.1) is the exception. It binds every folder below its method. A nearer method may add to it or make it stricter, and may not replace or loosen it. A nearer rule is stricter only when every act it allows, the fixed rule also allows. When a nearer rule conflicts with a fixed rule, or when it is unclear whether the nearer rule is stricter, the reader follows the fixed rule, tells the user about the conflict, and names the owners of both methods. Only the fixed rule's owner changes it, under 3.6.
 
