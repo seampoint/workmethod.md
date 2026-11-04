@@ -1,5 +1,10 @@
 # Changes
 
+## 1.2.1 conflicts between methods at the same distance (unreleased)
+
+- When two methods that both apply conflict and neither is nearer the work, neither wins. The reader names the conflicting rules and both methods, asks the user which to follow, and suggests taking the conflict to both owners, or to a person a method names to look after its methods. Before this, the draft settled only conflicts where one method was nearer.
+- No field, header or entry format changes.
+
 ## 1.2.0 working-draft rules
 
 - Number rules and keep each number for as long as the rule exists, so overrides, entries and reviews can cite `<method name> rule <n>` reliably.
