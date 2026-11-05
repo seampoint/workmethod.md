@@ -1,6 +1,6 @@
 # WORKMETHOD.md: method files and work records
 
-WORKMETHOD.md 1.2 working draft, November 2026. Not yet ratified as stable. Field names and rules may change until the format is ratified. Version 1.1 added the optional Window, Resurface and Same as fields to the 1.0 draft. Version 1.2 proposes numbered rules with reasons, the sources a rule rests on, fixed rules that a nearer method cannot loosen, and an optional Rule field on entries; readers that ignore the new field still read every entry. Skill package 1.2.1 implements this draft. The package version does not promise format stability.
+WORKMETHOD.md 1.2 working draft, November 2026. Not yet ratified as stable. Field names and rules may change until the format is ratified. Version 1.1 added the optional Window, Resurface and Same as fields to the 1.0 draft. Version 1.2 proposes numbered rules with reasons, the sources a rule rests on, fixed rules that a nearer method cannot loosen, and an optional Rule field on entries; readers that ignore the new field still read every entry. Skill package 1.2.1 implements this draft. Since package 1.2.0 this draft says that an unattended run writes no entry unless a method allows it, and how a person withdraws a commitment or a wait. The package version does not promise format stability.
 
 ## 1. Purpose
 
@@ -186,6 +186,8 @@ These fields give a reader dates, joins and rules it can compare, so attention o
 - A commitment is recorded only in the name of the person who made it, or the assistant's own for what it will do. Work that waits on someone who has not agreed to it is a `pending` entry: the person waiting is the Actor, and the Object names whom they wait on, for what, and by when.
 - A `change` entry about a commitment gives in Due the commitment's due date after the change; `-` means it no longer has one.
 - Source must be readable by a person. Internal message, session or tool identifiers are not a source.
+- With no person able to answer during a run, directly or through the assistant that asked for the work, as in a scheduled run, an assistant writes no entry, in `record/` or in a system a method designates in its place, whatever this specification would otherwise have it record. An unattended run must not write to a person's record without the person. Section 5 says what the run does instead. An assistant that cannot tell whether a person can answer treats the run this way until one does.
+- A method in force may allow an entry from such a run by a rule that says it applies to such runs. The entry names the assistant as Actor, that method's owner as Authority and that rule in `Rule`, says in Source that a run with no one present wrote it, or carries the same facts in a system a method designates, and is never a `decision` or a withdrawal.
 
 ### 4.2 Why one file per entry
 
@@ -200,6 +202,7 @@ Before applying status, readers join an entry that carries `Same as` to the name
 ### 4.4 Status rules
 
 - A `commitment` is open until a `done` entry with the same joined label follows it.
+- A person who drops a commitment closes it with a `done` entry whose Object is `Withdrawn:` followed by the commitment's Object, unchanged, naming that person as Actor and Authority. An assistant writes this only on the word of the person who made the commitment, the person who asked for an assistant's own commitment, the owner of a method in force or a person a method names for it, and never on its own; where a method reserves dropping it to a named person, only on that person's word. The person waiting on a `pending` entry or the owner of a method in force closes a wait that is over the same way, with that entry's Object after `Withdrawn:`. A reader that lists such an entry reports it as withdrawn by its Actor, not completed. A commitment or wait taken up again is a new entry of the same Kind with the same Label, dated after the withdrawal; neither it nor a second withdrawal is a duplicate under 4.3.
 - A `pending` entry is open until a `done` entry with the same joined label follows it.
 - A `proposal` or `correction` is open until a `decision` entry with the same joined label, by the method owner or a person the method names, accepts or rejects it. The decision counts only when its Date is the same moment as that entry or later. A proposal or correction written after the decision is open until a decision dated at or after the later entry. A writer never gives a proposal or correction the same Date as a decision it follows; it uses the next minute, so that a reader can always tell which came first.
 - A `change` records that a person altered something an assistant drafted; it closes nothing.
@@ -221,6 +224,10 @@ An assistant often cannot do the whole job from where it runs. An assistant on t
 4. Whoever completes it (another assistant, another app, a person) adds a `done` entry with the same Label.
 
 An assistant starting work on a file first looks for open `pending` entries about it and offers to complete them.
+
+In a run with no person able to answer (4.1), the assistant does not follow the steps above or make the offer. It takes no fallback step of the kind step 2 describes, and no step that this specification, a method or the person who set up the run reserves for a person or says to confirm first. The exception is a step that the person it is reserved for, or where it names no one the person who set up the run, has already said yes to, in instructions that person gave the run or in a `decision` entry the run can read; the yes covers the step as written there and no wider: a yes to one act covers it once, and a yes to a recurring act covers each time it names. If it cannot tell whether a step is one of these, whether a yes covers it, or whether a yes to one act has already been used, it does not take the step. If it cannot read a method on the path to the work, or cannot list a folder on that path, it does not do the work on that path. It writes no `-pending-` file, and no entry except as 4.1 allows. In the run's own output it says what cannot be done and why, names exactly what waits and where, including any open `pending` entry about the work, and says what it did and anything else it would have recorded.
+
+A method may name a folder outside `record/` for that output; each run adds a new file there, and an assistant starting work on a file also looks there for reports about it. An assistant that sets up such a run first says where its output will be kept and who will see it, or that the host keeps none, or that it cannot tell. An assistant that reads a run's report with a person present, in that folder or where the host keeps it, offers once to record what the person confirms; the entry's Date is when it is written, and its Source names the run and when it acted.
 
 ## 6. Ownership
 

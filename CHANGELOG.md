@@ -1,9 +1,13 @@
 # Changes
 
-## 1.2.1 conflicts between methods at the same distance (unreleased)
+## 1.2.1 working-draft rule changes (unreleased)
 
 - When two methods that both apply conflict and neither is nearer the work, neither wins. The reader names the conflicting rules and both methods, asks the user which to follow, and suggests taking the conflict to both owners, or to a person a method names to look after its methods. Before this, the draft settled only conflicts where one method was nearer.
-- No field, header or entry format changes.
+- With no person able to answer during a run, an assistant writes no entry unless a method allows it, and reports in the run's own output, because an unattended run must not write to a person's record without the person. Earlier packages told it to leave a `pending` entry. A scheduled run set up earlier stops leaving `pending` entries when its skill updates, and stops work on a path where it cannot read a method or list a folder. Check where its output goes before updating.
+- A person who drops a commitment, or no longer waits on a `pending` entry, closes it with a `done` entry whose Object is `Withdrawn:` followed by that entry's Object. Readers report it as withdrawn, not completed. A reader built earlier still computes the right open or closed status, and the word stays in the Object it reads.
+- This patch changes rules. These changes add no Kind, no field and no status computation.
+- The skill now states more of what the specification says: `open-items.md` carries the status rules, `record.md` tells a wait on someone from a step the assistant could not finish, a method name ends with its version, and a writer of rules gives reasons and names what a rule rests on.
+- Where the specification says a `done` follows an item, the skill now counts a `done` in the same minute as following it, so it closes the item. A writer gives a new commitment or `pending` entry a later minute than a `done` with its Label, so that a tie does not close it by accident.
 
 ## 1.2.0 working-draft rules
 

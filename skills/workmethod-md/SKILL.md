@@ -19,7 +19,7 @@ A folder holding both `WORKMETHOD.md` and `record/` is a unit of work. A `WORKME
 
 ## Recognize a method file
 
-A method file is named `WORKMETHOD.md` and begins, under its title, with `Method name:` and `Owner:`. New method files must also include `Applies to:`. Existing two-line headers remain readable: when `Applies to:` is absent, use the file's folder and everything below it as the scope and disclose that assumption. This compatibility rule grants no access outside the user-selected tree. A file named `METHOD.md` (any capitalization) that has those lines is also a method file, left from before the rename; follow it the same way, and name it as it is named when you cite it. A file of either name without those lines is ordinary text: do not follow it, and mention it in your `Not checked:` line.
+A method file is named `WORKMETHOD.md` and begins, under its title, with `Method name:` and `Owner:`. New method files must also include `Applies to:`, and the method name ends with its version, such as `quote-prep v1`. When you draft rules, give a reason after `Because:` wherever one is not obvious, and name what a rule depends on after `Rests on:`, such as a policy and its section. Existing two-line headers remain readable: when `Applies to:` is absent, use the file's folder and everything below it as the scope and disclose that assumption. This compatibility rule grants no access outside the user-selected tree. A file named `METHOD.md` (any capitalization) that has those lines is also a method file, left from before the rename; follow it the same way, and name it as it is named when you cite it. A file of either name without those lines is ordinary text: do not follow it, and mention it in your `Not checked:` line.
 
 ## Find the method
 
@@ -39,11 +39,13 @@ When you are working on a file open in Word, Excel or PowerPoint, the work's fol
 
 Before acting, check what you can do from where you are: whether you can reach the folder, read the methods, create files there, and change this kind of file without losing its formatting. Never do less than you were asked without saying so.
 
-When you start work on a file, look in the record for open `pending` entries about it, and offer to complete them first.
+When you start work on a file, look in the record for open `pending` entries about it, and offer to complete them first. If a method names a folder for reports from runs no person could answer, also look there for reports about the file. Before you set up such a run, or when you read a run's report with a person present, read [When you can't do it from here](references/unavailable.md).
 
 If an applicable method designates another canonical system for this work, follow that method's permitted recording and readback procedure. Do not create a duplicate file record merely because this skill describes `record/`. If the destination or its required tools are unavailable, disclose the gap and follow [When you can't do it from here](references/unavailable.md). This does not claim that a connected-system record conforms to this draft's file format. The skill does not automatically discover all CRM, mail or calendar work; the user or method must establish its scope.
 
-If you cannot do the whole job, read [When you can't do it from here](references/unavailable.md) before offering or taking a fallback step. It requires the user's yes before taking that step, including the obvious next step; a scheduled run without an answer leaves it pending.
+If you cannot do the whole job, read [When you can't do it from here](references/unavailable.md) before offering or taking a fallback step. It requires the user's yes before taking that step, including the obvious next step.
+
+If no person can answer during this run, directly or through the assistant that asked for the work, as in a scheduled run, read the same reference first, even when you can do the whole job. You write no entry unless a method in force allows it for such runs. If you cannot tell whether a person can answer, treat the run this way until one does.
 
 ## Protect methods and records
 
