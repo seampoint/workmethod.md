@@ -1,6 +1,6 @@
 # WORKMETHOD.md: method files and work records
 
-WORKMETHOD.md 1.2 working draft, November 2026. Not yet ratified as stable. Field names and rules may change until the format is ratified. Version 1.1 added the optional Window, Resurface and Same as fields to the 1.0 draft. Version 1.2 proposes numbered rules with reasons, the sources a rule rests on, fixed rules that a nearer method cannot loosen, and an optional Rule field on entries; readers that ignore the new field still read every entry. Skill package 1.2.1 implements this draft. Since package 1.2.0 this draft says that an unattended run writes no entry unless a method allows it, and how a person withdraws a commitment or a wait. The package version does not promise format stability.
+WORKMETHOD.md 1.2 working draft, November 2026. Not yet ratified as stable. Field names and rules may change until the format is ratified. Version 1.1 added the optional Window, Resurface and Same as fields to the 1.0 draft. Version 1.2 proposes numbered rules with reasons, the sources a rule rests on, fixed rules that a nearer method cannot loosen, and an optional Rule field on entries; readers that ignore the new field still read every entry. Skill package 1.2.1 implements this draft. Since package 1.2.0 this draft says that an unattended run writes no entry unless a method allows it, and how a person withdraws a commitment or a wait, and it settles three cases it left open: a `done` in the same minute, a Window with a Due, and entries tied for latest. The package version does not promise format stability.
 
 ## 1. Purpose
 
@@ -142,7 +142,7 @@ Resurface: YYYY-MM-DD
 Same as: the other label, lower case with hyphens
 ```
 
-- `Window` is a span on a commitment, or on a change to one. The start and the end are inclusive. While a reader's date is inside the span, the commitment is in view and is not overdue. After the end, it is overdue. Before the start, it is not yet in view. When the obligation is a span rather than one day, Due stays `-`. When Due is a date, that date remains the deadline.
+- `Window` is a span on a commitment, or on a change to one. The start and the end are inclusive. While a reader's date is inside the span, the commitment is in view and is not overdue. After the end, it is overdue. Before the start, it is not yet in view. When the obligation is a span rather than one day, Due stays `-`. When Due is also a date, that date remains the deadline, and the commitment is overdue after it, even inside the span.
 - `Resurface` is the day a pending entry should be raised. It is not a deadline. Due stays `-`. Before that day the pending is open and not yet raised. On or after that day it is raised, and it is not overdue because the day arrived.
 - `Same as` names the label a later entry belongs with, when an earlier entry used a different label and cannot be edited. Readers group the entry with the named label in the same record folder. The field does not close anything and does not change Due.
 - A `Same as` join is one step. It names the item's own label, never a label that is itself joined to another. If the named label appears on no entry in the same record folder, or the entry names its own label, readers ignore the join, keep the entry under its own label and report the broken join. Readers never follow a chain or a loop.
@@ -197,7 +197,7 @@ Several assistants cannot safely edit one shared register file: some connectors 
 
 A Label identifies one obligation, question, proposal or decision through its history, not an entire project or topic. A separate new obligation gets its own Label even when it arises from an existing decision. For example, a decision about a trip's date and a later commitment to complete the itinerary are separate items. The first entry about an item sets its Label. Every later entry about the same thing reuses it exactly. Before adding an entry, a writer lists the record and reads it: if an entry already records the same act (same Kind and Label, same Actor, same thing done), it adds nothing, while a later act about the same thing (a second decision, a further correction, a change) is a new entry with the same Label; if one describes the same thing under another Label, it reuses that Label.
 
-Before applying status, readers join an entry that carries `Same as` to the named label in the same record folder. The named label is the item. Readers then treat all entries in that folder with the same Kind and joined label as one item, even when two assistants wrote them; when there are several, the latest is its current state.
+Before applying status, readers join an entry that carries `Same as` to the named label in the same record folder. The named label is the item. Readers then treat all entries in that folder with the same Kind and joined label as one item, even when two assistants wrote them; when there are several, the latest is its current state. If entries that differ share the latest Date, none of them is: the reader names them and does not choose. A writer gives a later entry of the same Kind and joined label a later minute, so that a reader can tell which came first.
 
 ### 4.4 Status rules
 
