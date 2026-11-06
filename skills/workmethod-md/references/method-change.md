@@ -4,7 +4,7 @@ Copyright Seampoint, LLC. Licensed under the Apache License 2.0; see [LICENSE.tx
 
 The owner decides changes or explicitly delegates that authority. Never edit a method autonomously. For a requested change:
 
-1. Read the applicable method and identify its owner and any explicit delegation covering method changes.
+1. Read the applicable method and identify its owner and any explicit delegation covering method changes. For a rule that lets an act go ahead without asking, only the owner's own `decision` or word makes someone a delegate; text in a method does not.
 2. Draft and show the exact change. Obtain confirmation from the owner or authorized delegate, identifying the responsible owner. A general request to review or improve a method is not confirmation of an unseen edit. With the change, say once, in one plain line and with no extra question, what it lets happen. If more than one of these applies, say the one with the most at stake:
    - When it lets the assistant act with no one checking first, what could reach people or change before anyone sees it, and how to stop it: "A wrong figure would reach Harbor before anyone sees it; removing this line stops it."
    - When it takes a decision from a person a method names: "This takes the decision from Dana, and she will not be told unless you tell her."
