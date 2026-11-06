@@ -8,7 +8,8 @@
 - This patch changes rules. These changes add no Kind and no field. The rules below on ties and on a Window with a Due settle outcomes the draft left open.
 - The skill now states more of what the specification says: `open-items.md` carries the status rules, `record.md` tells a wait on someone from a step the assistant could not finish, a method name ends with its version, and a writer of rules gives reasons and names what a rule rests on.
 - A `done` follows an item when its Date is the same minute as the item's Date or later, in existing records too, so a same-minute `done` closes the item. The draft left that tie undefined. A writer gives a new commitment or `pending` entry a later minute than a `done` with its Label, as a writer already did for a proposal or correction and a decision.
-- A commitment with both a Window and a Due is overdue after the Due, even inside the span. If entries of the same Kind and label that differ share the latest Date, none of them is the current state: the reader names them and does not choose. A writer gives a later entry a later minute.
+- A commitment with both a Window and a Due is overdue after the Due, even inside the span. If entries of the same Kind and label that differ share the latest Date, none of them is the current state: the reader names them and does not choose. A writer gives a later entry a later minute. A change that gives no Window leaves an earlier Window in place, and `Window: -` clears it.
+- The skill's rules on closing a proposal or correction now say the decision must accept or reject it, as the specification does.
 
 ## 1.2.0 working-draft rules
 
