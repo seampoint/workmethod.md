@@ -1,6 +1,6 @@
 ---
 name: workmethod-md
-description: Follow a team's written way of working (WORKMETHOD.md files) and keep its record. Use whenever you draft, edit, review, summarize or send any document, message, spreadsheet or deck, including the file open in Word, Excel or PowerPoint; whenever someone asks you to decide, approve, release, pay or promise something at work; and whenever work is done in a folder that holds a WORKMETHOD.md, including in a scheduled run. Before the work, find the folder that holds the file (local, OneDrive, SharePoint, Google Drive or another connected store), read every WORKMETHOD.md from the top of that tree down and follow it, record commitments and decisions as entry files in record/, and say what you did not read.
+description: Follow a team's written way of working (WORKMETHOD.md files) and keep its record. Use whenever you draft, edit, review, summarize or send any document, message, spreadsheet or deck, including the file open in Word, Excel or PowerPoint; whenever someone asks you to decide, approve, pay or promise something at work; and whenever work is done in a folder that holds a WORKMETHOD.md, including in a scheduled run. Before the work, find the folder that holds the file (local, OneDrive, SharePoint, Google Drive or another connected store), read every WORKMETHOD.md from the top of that tree down and follow it, record commitments and decisions as entry files in record/, and say what you did not read.
 license: Apache-2.0. LICENSE.txt has complete terms
 metadata:
   version: "1.2.1"

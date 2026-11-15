@@ -1,6 +1,6 @@
 # Changes
 
-## 1.2.1 working-draft rule changes (unreleased)
+## 1.2.1 working-draft rule changes
 
 - When two methods that both apply conflict and neither is nearer the work, neither wins. The reader names the conflicting rules and both methods, asks the user which to follow, and suggests taking the conflict to both owners, or to a person a method names to look after its methods. Before this, the draft settled only conflicts where one method was nearer.
 - With no person able to answer during a run, an assistant writes no entry unless a method allows it, and reports in the run's own output, because an unattended run must not write to a person's record without the person. Earlier packages told it to leave a `pending` entry. A scheduled run set up earlier stops leaving `pending` entries when its skill updates, and stops work on a path where it cannot read a method or list a folder. Check where its output goes before updating.
@@ -11,7 +11,7 @@
 - What notes suggest, or what someone reports a person decided, is a `note` until that person confirms it. A `decision` entry counts as someone's yes only when its Source says who asked them, where and when, or quotes their own words from a message or recording. A method's owner may name notes a person wrote or signed that count.
 - The specification's list of consequential acts now matches the skill's: it adds what is shared or promised outside the firm, a default decider, and two sentences on a decider's own instruction and on doubt.
 - The skill also: holds, with no one present, a step that changes what other people see or rely on unless a method or the person who set up the run named it; keeps an apology, bad news or anything about someone's job for the person unless they approved that exact message or a method's rule says otherwise; stops asking which to follow when the method reserves the point for someone else; writes a `done` on someone else's commitment only on their word or for its own act; says what would happen, to whom and on what terms when it brings a decision; edits a new unsaved file without searching for its method, and says so; and offers a method's owner the rule change when they say "always" or "never".
-- The skill also applies when someone asks the assistant to decide, approve, release, pay or promise something at work.
+- The skill also applies when someone asks the assistant to decide, approve, pay or promise something at work.
 - A method's owner may delegate adopting such a rule, by their own `decision` or word. A method with no record beside it names, under The record, where adoption entries and acts under its rules go.
 - This patch changes rules. These changes add no Kind and no field. The rules below on ties and on a Window with a Due settle outcomes the draft left open.
 - The skill now states more of what the specification says: `open-items.md` carries the status rules, `record.md` tells a wait on someone from a step the assistant could not finish, a method name ends with its version, and a writer of rules gives reasons and names what a rule rests on.
