@@ -1,6 +1,6 @@
 # Changes
 
-## 1.2.2 working-draft rule change (unreleased)
+## 1.2.2 working-draft rule change
 
 - Before a consequential act in a run with no person able to answer, the assistant establishes a durable trail: an act entry that a rule in force allows, or the run's output kept for the owner by the host or in a folder a method names. The trail identifies the act, the instruction that authorized it, when it happened and its result. If neither route is available, or the assistant cannot establish that the output is kept, it holds the act and reports the gap. Before this, a run could act on a person's earlier yes and leave nothing in the firm's files or anywhere the owner would see. The rule grants no permission to write an entry or a report file.
 - This patch changes one rule. It adds no Kind and no field. Package 1.2.1 and earlier do not hold such an act, so under one owner's tree a run can show either behavior until every instance updates.
