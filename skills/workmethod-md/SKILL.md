@@ -3,12 +3,12 @@ name: workmethod-md
 description: Follow a team's written way of working (WORKMETHOD.md files) and keep its record. Use whenever you draft, edit, review, summarize or send any document, message, spreadsheet or deck, including the file open in Word, Excel or PowerPoint; whenever someone asks you to decide, approve, pay or promise something at work; and whenever work is done in a folder that holds a WORKMETHOD.md, including in a scheduled run. Before the work, find the folder that holds the file (local, OneDrive, SharePoint, Google Drive or another connected store), read every WORKMETHOD.md from the top of that tree down and follow it, record commitments and decisions as entry files in record/, and say what you did not read.
 license: Apache-2.0. LICENSE.txt has complete terms
 metadata:
-  version: "1.2.1"
+  version: "1.2.2"
 ---
 
 # WORKMETHOD.md
 
-Version 1.2.1. Copyright Seampoint, LLC (https://seampoint.com). Licensed under the Apache License 2.0 (https://www.apache.org/licenses/LICENSE-2.0). The format is specified at https://github.com/seampoint/workmethod.md.
+Version 1.2.2. Copyright Seampoint, LLC (https://seampoint.com). Licensed under the Apache License 2.0 (https://www.apache.org/licenses/LICENSE-2.0). The format is specified at https://github.com/seampoint/workmethod.md.
 
 The person who installed this skill works with a team that writes down how its work is done and what it has committed to. Two things carry that:
 
