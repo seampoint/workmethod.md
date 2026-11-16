@@ -1,6 +1,6 @@
 # Known limits of the working draft
 
-Skill package 1.2.1 implements the WORKMETHOD.md 1.2 working draft. The format has not been ratified as stable. It states instructions for an assistant; installing it does not guarantee compliance or enable capabilities the host lacks.
+Skill package 1.2.2 implements the WORKMETHOD.md 1.2 working draft. The format has not been ratified as stable. It states instructions for an assistant; installing it does not guarantee compliance or enable capabilities the host lacks.
 
 - Reading requires access to the selected stores. Saves require a permitted writer and independent readback. The skill does not install connectors, runtimes or Workbench.
 - Automatic activation for CRM, email, calendar and other connected-system operations is not qualified. Establish the work scope and governing method explicitly. Follow a method-designated canonical system without duplicating its records; the connected system is not certified as a file-format implementation by this draft.
@@ -15,6 +15,6 @@ Skill package 1.2.1 implements the WORKMETHOD.md 1.2 working draft. The format h
 - Assistant vendors and connected services have their own processing, caching and retention policies. Keeping authoritative files in a firm's store does not control those policies.
 - The example proposal and spreadsheet are intentionally absent. Sample record statements are illustrative history; they are not evidence that the current assistant inspected those missing files.
 - Skill package 1.2.0 and earlier tell an assistant to leave a `pending` entry from an unattended run and do not know the `Withdrawn:` wording. A product that bundles one of them may also carry its own rule for unattended runs. Under one owner's tree, a record can show both behaviors until every instance updates.
-- No scheduled route has been qualified for this package. An unattended run's report is kept where the host keeps it, unless a method names a folder. If the host discards it, the firm's files show nothing about that run. A run may also act on a person's earlier yes and leave no entry, so finished work can still read as open.
+- No scheduled route has been qualified for this package. An unattended run's report is kept where the host keeps it, unless a method names a folder. A consequential act now holds unless a permitted act entry or retained run output can provide a durable trail. Non-consequential preparation may still leave the firm's files silent when the host discards its output. An act documented only in retained run output can still read as open in the canonical record until a person confirms it.
 
 The [field-report dispositions](field-report-triage.md) retain the proposed changes and deferrals. The [qualification record](qualification.md) identifies what has actually been tested. Public availability of this draft is separate from public Workbench availability and from stable-format ratification.
